@@ -1,12 +1,12 @@
-var mongoose = require('mongoose');
+let mongoose = require('mongoose');
 
-
-var Client = mongoose.Schema({
-
-  name: String
-
+let Client = mongoose.Schema({
+  name: {type: String},
+  city: {type: String},
+  birth: {type: String},
+  phone: {type: String},
+  creationDate: {type: Date, default: new Date()}
 });
-
 
 module.exports = mongoose.model('Client', Client);
 
